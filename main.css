@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Turret+Road:wght@200;300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+/*Initial setup*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: "Ubuntu", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+/*Utility*/
+/*General*/
+.header, .footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Header*/
+
+/*Main*/
+.app {
+    position: relative;
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    min-height: 80vh;
+    width: 100%;
+}
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.etcher{
+    position: relative;
+    height: 700px;
+    width: 700px;
+    border: 1px solid black;
+}
+/*Footer*/
