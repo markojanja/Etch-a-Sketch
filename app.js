@@ -18,7 +18,6 @@ slider.addEventListener('input', function(e){
 //create div add class box
 //set 16x16 grid of boxes and append them to the etcher
 function createGrid(size=16){
-
     let gridSize = size**2;
     for(let i=0;i<gridSize;i++){
         const div = document.createElement('div');
@@ -31,15 +30,25 @@ function createGrid(size=16){
 
 
 let color = 'rgb(0,0,0)';
+//inital state of mouse button pressed
 let mouse = false
-document.body.onmousedown = () => (mouse = true)
-document.body.onmouseup = () => (mouse = false)
+//on mouse click change state to true
+document.body.onmousedown = () => (mouse = true);
+//on mouse realese set mouse state to false 
+document.body.onmouseup = () => (mouse = false);
 
+
+const ereaseBtn = document.querySelector('.erease-btn');
+
+//set the color to white when erease btn is clicked
+ereaseBtn.onclick = () =>(color = '#ffffff'); 
+
+
+//change background of the box div on mouse click 
 function draw(){
     colorPicker.addEventListener('change', changeColor, false);
-    
     const box  = document.querySelectorAll('.box');
-    
+
     box.forEach(b =>{
         b.addEventListener('mouseover', function(e){
             if(e.type === 'mouseover'&& mouse){
@@ -52,9 +61,24 @@ function draw(){
         })
     })
 }
+
+const resetBtn = document.querySelector('.reset-btn');
+
+//resets the grid , the slider, color and colorPicker
+resetBtn.addEventListener('click',()=>{
+    etcher.innerHTML = ''
+    slider.value = 16
+    color = 'rgb(0,0,0)'
+    colorPicker.value = color
+    createGrid();
+    draw();
+})
+
 //helper function to return color value
 function changeColor(e){
     color = e.target.value;
 }
+
+
 
 

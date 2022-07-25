@@ -11,6 +11,7 @@
 
 html, body{
     font-family: "Ubuntu", sans-serif;
+    background-color: #ffffff;
 }
 
 a{
@@ -54,6 +55,7 @@ li{
     border: 1px solid black;
 }
 .box{
+    cursor: pointer;
     height: 100%;
     width: 100%;
     border: 1px solid black;
