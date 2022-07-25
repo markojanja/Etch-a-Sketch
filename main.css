@@ -48,8 +48,30 @@ li{
 }
 .etcher{
     position: relative;
-    height: 700px;
-    width: 700px;
+    display: grid;
+    height: 800px;
+    width: 800px;
     border: 1px solid black;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+#colorPicker{
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: none;
+    padding: 0;
+    border: none;
+    border-radius: 40px;
+}
+#colorPicker::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+#colorPicker::-webkit-color-swatch{
+    border: none;
+    border-radius: 40px;
 }
 /*Footer*/
