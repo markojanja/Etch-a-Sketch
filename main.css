@@ -10,34 +10,48 @@
 }
 
 html, body{
+    height: 100%;
     font-family: "Ubuntu", sans-serif;
-    background-color: #ffffff;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 a{
     text-decoration: none;
+    color: #ffffff;
 }
 
 li{
     list-style: none;
 }
+h1,h2,h3,h4,h5,h6,
+label, input{
+    color: #ffffff;
+}
 /*Utility*/
 /*General*/
-.header, .footer{
+.header{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:rgba(0,0,0,0.1);
 }
 /*Header*/
-
+.header{
+    padding: 50px 10px;
+   
+}
 /*Main*/
 .app {
     position: relative;
     display: grid;
     grid-template-columns: 20vw 80vw;
-    min-height: 80vh;
+    place-items: start;
     width: 100%;
+    padding: 15px 0;
 }
 .container{
     position: relative;
@@ -45,21 +59,69 @@ li{
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+    width: 80%;
 }
 .etcher{
     position: relative;
     display: grid;
-    height: 800px;
-    width: 800px;
-    border: 1px solid black;
+    height: 700px;
+    width: 700px;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
 }
 .box{
     cursor: pointer;
     height: 100%;
     width: 100%;
-    border: 1px solid black;
 }
+/*sidebar*/
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+.menu li{
+    width: 80%;
+    margin: 10px auto;
+}
+.menu fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 100%;
+}
+.menu label{
+    margin: 10px 0;
+}
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    padding: 15px 30px;
+    width: 120px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    transition: all 0.3s linear;
+
+}
+.btn:hover{
+    background-color: #ffffff;
+    color:#2BD2FF; 
+    transition: all 0.3s linear;
+}
+
 #colorPicker{
     display: block;
     height: 40px;
@@ -77,3 +139,12 @@ li{
     border-radius: 40px;
 }
 /*Footer*/
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 0;
+    background-color: rgba(0,0,0,0.1);
+    text-align: center
+}

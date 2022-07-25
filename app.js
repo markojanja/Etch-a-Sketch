@@ -57,7 +57,7 @@ function draw(){
             
         })
         b.addEventListener('mousedown', function(e){
-            e.target.style.background = `${color}`
+            e.target.style.background = `${color}`;
         })
     })
 }
