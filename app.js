@@ -3,6 +3,7 @@
 const etcher = document.querySelector(".etcher");
 const slider = document.getElementById("slider");
 const colorPicker = document.querySelector("#colorPicker");
+const gridInfo = document.getElementById('grid-info')
 
 //initial grid
 createGrid();
@@ -25,6 +26,7 @@ function createGrid(size = 16) {
     etcher.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     etcher.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     etcher.appendChild(div);
+    gridInfo.innerHTML = `${size} x ${size}`;
   }
 }
 
@@ -82,5 +84,5 @@ randomColorBtn.addEventListener("click", function () {
 
   color = `rgb(${r}, ${g}, ${b})`;
   draw();
-  
+
 });

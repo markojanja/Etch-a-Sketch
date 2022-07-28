@@ -89,8 +89,8 @@ label, input{
     width: 100%;
 }
 .menu li{
-    width: 80%;
-    margin: 10px auto;
+    width: 100%;
+    margin: 10px;
 }
 .menu fieldset{
     display: flex;
@@ -100,6 +100,10 @@ label, input{
 }
 .menu label{
     margin: 10px 0;
+}
+.menu p {
+    margin-top: 5px;
+    color: #ffffff;
 }
 .btn{
     display: inline-block;
