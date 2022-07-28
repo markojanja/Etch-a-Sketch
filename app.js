@@ -31,6 +31,7 @@ function createGrid(size = 16) {
 let color = "rgb(0,0,0)";
 //inital state of mouse button pressed
 let mouse = false;
+
 //on mouse click change state to true
 document.body.addEventListener("mousedown",() =>(mouse = true));
 //on mouse realese set mouse state to false
@@ -50,9 +51,12 @@ function draw() {
     b.addEventListener("mouseover", function (e) {
       if (e.type === "mouseover" && mouse) {
         e.target.style.background = `${color}`;
+        
       }
     });
     b.addEventListener("mousedown", function (e) {
+
+      e.preventDefault();//prevernt mouse grab effect
       e.target.style.background = `${color}`;
     });
   });
@@ -89,3 +93,4 @@ randomColorBtn.addEventListener('click',function () {
 function changeColor(e) {
   color = e.target.value;
 }
+
