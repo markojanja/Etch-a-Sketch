@@ -15,6 +15,7 @@ html, body{
     background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 100%;
 }
 
 
@@ -32,17 +33,24 @@ label, input{
 }
 /*Utility*/
 /*General*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+
+}
 .header{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:rgba(0,0,0,0.1);
-}
-/*Header*/
-.header{
-    padding: 50px 10px;
-   
+    background-color:rgba(0,0,0,0.3);
+    width: 100%;
+    padding: 20px;
 }
 /*Main*/
 .app {
@@ -52,6 +60,7 @@ label, input{
     place-items: start;
     width: 100%;
     padding: 15px 0;
+    flex: 1;
 }
 .container{
     position: relative;
@@ -87,10 +96,13 @@ label, input{
     align-items: flex-start;
     justify-content: center;
     width: 100%;
+    margin-inline: 20px auto;
+    gap: 20px;
 }
 .menu li{
-    width: 100%;
-    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .menu fieldset{
     display: flex;
@@ -143,9 +155,10 @@ label, input{
 }
 /*Footer*/
 .footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 25px 0;
     background-color: rgba(0,0,0,0.1);

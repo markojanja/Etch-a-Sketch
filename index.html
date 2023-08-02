@@ -8,42 +8,44 @@
     <title>Etch-a-sketch</title>
 </head>
 <body>
-    <header class="header">
-        <h1>Etch a sketch</h1>
-    </header>
-    <main class="app">
-        <aside class="sidebar">
-            <ul class="menu">
-                <li>
-                    <fieldset>
-                        <label for="">Select grid</label>
-                        <input type="range" name="range" min="16" max="64"  step="16" value = "16" id="slider">
-                        <p>Grid size: <span id="grid-info"></span></p>
-                    </fieldset>
-                    
-                </li>
-                <li>
-                    <fieldset>
-                        <label for="">Select color</label>
-                        <input type="color" name="colorPicker" id="colorPicker">
-                        
-                    </fieldset>
-                    
-                </li>
-                <li><button class="btn reset-btn" type="button">Reset</button></li>
-                <li><button class="btn erease-btn">Erease</button></li>
-                <li><button class="btn random-btn">Random</button></li>
-            </ul>
-        </aside>
-        <section class="container">
-            <div class="etcher">
-
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <h4>Copywrite &copy; 2022 <a href="#">MarkoJanja</a></h4>
-    </footer>
-    <script src="app.js"></script>
+<div class="wrapper">
+        <header class="header">
+            <h1>Etch a sketch</h1>
+        </header>
+        <main class="app">
+            <aside class="sidebar">
+                <ul class="menu">
+                    <li>
+                        <fieldset>
+                            <label for="">Select grid</label>
+                            <input type="range" name="range" min="16" max="64" step="16" value="16" id="slider">
+                            <p>Grid size: <span id="grid-info"></span></p>
+                        </fieldset>
+        
+                    </li>
+                    <li>
+                        <fieldset>
+                            <label for="">Select color</label>
+                            <input type="color" name="colorPicker" id="colorPicker">
+        
+                        </fieldset>
+        
+                    </li>
+                    <li><button class="btn reset-btn" type="button">Reset</button></li>
+                    <li><button class="btn erease-btn">Erease</button></li>
+                    <li><button class="btn random-btn">Random</button></li>
+                </ul>
+            </aside>
+            <section class="container">
+                <div class="etcher">
+        
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <h4>Copywrite &copy; 2022 <a href="#">MarkoJanja</a></h4>
+        </footer>
+        <script src="app.js"></script>
+</div>
 </body>
 </html>
